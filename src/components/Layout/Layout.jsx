@@ -1,4 +1,4 @@
-// import { GlobalStyle } from '../../GlobalStyled/GlobalStyled.styled';
+import { GlobalStyle } from '../../GlobalStyled/GlobalStyled.styled';
 import { Outlet } from 'react-router-dom';
 import { Container, List } from './Layout.styled';
 import { Suspense } from 'react';
@@ -22,7 +22,7 @@ export default function Layout() {
           <Outlet />
         </Suspense>
       </Container>
-      {/* <GlobalStyle /> */}
+      <GlobalStyle />
     </div>
   );
 }
