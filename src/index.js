@@ -8,7 +8,7 @@ import './index.css';
 ReactDOM.render(
  
   <React.StrictMode>
-     <BrowserRouter basename="/goit-react-hw-05-movies/">
+     <BrowserRouter basename="/test-react-router-dom/">
     <App />
     </BrowserRouter>
   </React.StrictMode>,
