@@ -1,51 +1,51 @@
-// import SearchBar from '../SearchBar/SearchBar';
-// import { List, ListItem } from './MoviesPage.styled';
-// import { getSearch } from 'services/publicationsApi.js';
-// import { useState, useEffect } from 'react';
-// import { Link, useSearchParams, useLocation } from 'react-router-dom';
+import SearchBar from '../SearchBar/SearchBar';
+import { List, ListItem } from './MoviesPage.styled';
+import { getSearch } from 'services/publicationsApi.js';
+import { useState, useEffect } from 'react';
+import { Link, useSearchParams, useLocation } from 'react-router-dom';
 
 
 export default function MoviesPage() {
   
-  // const [movies, setMovies] = useState([]);
-  // const [searchParams, setSearchParams] = useSearchParams();
-  // const newQuery = searchParams.get('query');
-  // const location = useLocation();
+  const [movies, setMovies] = useState([]);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const newQuery = searchParams.get('query');
+  const location = useLocation();
   
-  // useEffect(() => {
-  //   async function getMovies() {
+  useEffect(() => {
+    async function getMovies() {
       
-  //     try {
-  //       if (newQuery === null) {
-  //         return;
-  //       }
+      try {
+        if (newQuery === null) {
+          return;
+        }
         
-  //       const { results, total_results } = await getSearch(newQuery);
-  //       if (total_results === 0) {
-  //         alert('Nothing found');
-  //         return;
-  //       }
+        const { results, total_results } = await getSearch(newQuery);
+        if (total_results === 0) {
+          alert('Nothing found');
+          return;
+        }
         
 
-  //       const films = results.map(({ id, original_title, poster_path }) => {                    
-  //         return { id, original_title, poster_path };
-  //       });
+        const films = results.map(({ id, original_title, poster_path }) => {                    
+          return { id, original_title, poster_path };
+        });
 
-  //       setMovies(films);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   }
+        setMovies(films);
+      } catch (error) {
+        console.log(error);
+      }
+    }
     
-  //   getMovies();
-  // }, [newQuery]);
+    getMovies();
+  }, [newQuery]);
 
-  // const handleFormSubmit = query => {
-  //   return setSearchParams({query});
-  // };
+  const handleFormSubmit = query => {
+    return setSearchParams({query});
+  };
   return (
     <div>
-      {/* <SearchBar onSubmit={handleFormSubmit} />
+      <SearchBar onSubmit={handleFormSubmit} />
       <List>
         {movies.map(movie => {
           return (
@@ -74,8 +74,8 @@ export default function MoviesPage() {
             </ListItem>
           );
         })}
-      </List> */}
-      Movies
+      </List>
+      
     </div>
   );
 }
