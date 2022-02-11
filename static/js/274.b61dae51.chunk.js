@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunktest_react_router_dom=self.webpackChunktest_react_router_dom||[]).push([[274],{274:function(e,t,r){r.r(t),r.d(t,{default:function(){return n}});var u=r(184);function n(){return(0,u.jsx)("div",{children:"Movies"})}}}]);
-//# sourceMappingURL=274.b61dae51.chunk.js.map
